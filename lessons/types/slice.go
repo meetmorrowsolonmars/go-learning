@@ -34,7 +34,7 @@ func main() {
 		len(newSlice), cap(newSlice))
 
 	//type Slice struct {
-	//	Array [N]interface{} // C++ void* Array
+	//	Array [Cap]interface{} // C++ void* Array
 	//	Len int
 	//	Cap int
 	//}
@@ -59,7 +59,7 @@ func main() {
 	fmt.Printf("Child slice C %v\n", childSliceC)
 
 	//type Slice struct {
-	//	Array [N]interface{} // C++ void* Array
+	//	Array [Cap]interface{} // C++ void* Array
 	//	Len int
 	//	Cap int
 	//}
@@ -83,7 +83,7 @@ func main() {
 	fmt.Printf("Child slice C %v\n", childSliceC)
 
 	//type Slice struct {
-	//	Array [N]interface{} // C++ void* Array
+	//	Array [Cap]interface{} // C++ void* Array
 	//	Len int
 	//	Cap int
 	//}
