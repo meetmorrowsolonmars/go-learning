@@ -103,4 +103,40 @@ func main() {
 	fmt.Printf("Parent slice[2:4] %v\n", parentSlice[2:4])
 	fmt.Printf("Parent slice[4:6] %v\n", parentSlice[4:6])
 	fmt.Printf("Child slice A %v\n", childSliceA)
+
+	//type Slice struct {
+	//	Array [Cap]interface{} // C++ void* Array
+	//	Len int
+	//	Cap int
+	//}
+
+	// And more
+	fmt.Println("\nAnd more")
+	type Bag struct {
+		Things []int
+	}
+
+	bags := []Bag{
+		{Things: []int{1, 2}},   // Bag 1
+		{Things: []int{}},       // Bag 2
+		{Things: []int{10, 20}}, // Bag 3
+	}
+
+	fmt.Printf("Bags: %+v\n", bags)
+	for i, bag := range bags {
+		fmt.Printf("Bag %d before append: %+v\n", i+1, bag)
+		bag.Things = append(bag.Things, 3, 4, 5)
+		fmt.Printf("Bag %d after append: %+v\n\n", i+1, bag)
+	}
+
+	fmt.Printf("Bags after first loop: %+v\n", bags)
+	for i := range bags {
+		fmt.Printf("Bag %d before append: %+v\n", i+1, bags[i])
+		bags[i].Things = append(bags[i].Things, 3, 4, 5)
+		fmt.Printf("Bag %d after append: %+v\n\n", i+1, bags[i])
+	}
+
+	fmt.Printf("Bags: %+v\n", bags)
+	// HOMEWORK: Create the same list of bags, but keep pointers to the Bag
+	// object in it and do the same append operations yourself.
 }
