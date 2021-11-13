@@ -33,6 +33,7 @@ func main() {
 	fmt.Printf("New slice %v, is nil %t, len %d, cap %d\n", newSlice, newSlice == nil,
 		len(newSlice), cap(newSlice))
 
+	// https://github.com/golang/go/blob/master/src/runtime/slice.go#L15
 	//type Slice struct {
 	//	Array [Cap]interface{} // C++ void* Array
 	//	Len int
